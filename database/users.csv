@@ -1,0 +1,4 @@
+first_name,last_name,username,email,password,role
+Admin,FitSpace,admin,admin@fitspace.fr,123456,admin
+Jean,Dupont,jdupont,jean@mail.com,123456,user
+Marie,Martin,mmartin,marie@mail.com,123456,user
