@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FITSPACE Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#004b74",
+                        "on-background": "#1a1c1c",
+                        "on-primary-container": "#fff9f8",
+                        "tertiary": "#005f93",
+                        "surface-dim": "#dadada",
+                        "on-secondary-fixed-variant": "#474746",
+                        "primary-fixed": "#ffdad6",
+                        "surface-container-low": "#f3f3f3",
+                        "inverse-primary": "#ffb4ac",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary-container": "#f9faff",
+                        "surface-tint": "#c00015",
+                        "on-primary-fixed-variant": "#93000d",
+                        "tertiary-fixed": "#cde5ff",
+                        "surface-container": "#eeeeee",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "primary": "#b90014",
+                        "primary-container": "#e31b23",
+                        "outline": "#926e6b",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9f9",
+                        "tertiary-container": "#0079b9",
+                        "on-secondary-container": "#636262",
+                        "outline-variant": "#e7bdb8",
+                        "surface-container-high": "#e8e8e8",
+                        "on-error": "#ffffff",
+                        "secondary": "#5f5e5e",
+                        "on-surface": "#1a1c1c",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "secondary-container": "#e2dfde",
+                        "on-primary-fixed": "#410002",
+                        "tertiary-fixed-dim": "#94ccff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "inverse-surface": "#2f3131",
+                        "on-surface-variant": "#5d3f3c",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#001d32",
+                        "surface": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "container-max-width": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Montserrat"],
+                        "label-sm": ["Montserrat"],
+                        "label-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background border-b-2 border-surface-variant flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform">menu</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile italic font-black text-primary tracking-tighter uppercase">FITSPACE</h1>
+</div>
+<div class="flex items-center gap-margin-mobile">
+<div class="hidden md:flex gap-4 items-center">
+<span class="font-label-md text-label-md text-on-surface-variant">Admin Console</span>
+<div class="w-[1px] h-6 bg-surface-variant"></div>
+</div>
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform">account_circle</span>
+</div>
+</header>
+<div class="flex pt-16 min-h-screen">
+<!-- NavigationDrawer (Desktop) -->
+<aside class="hidden md:flex flex-col h-[calc(100vh-64px)] w-72 p-4 gap-2 bg-surface-container-low border-r border-surface-variant sticky top-16">
+<div class="flex flex-col gap-1 p-4 mb-4 border-b border-surface-variant">
+<div class="flex items-center gap-3">
+<img alt="Alex Rivers" class="w-12 h-12 rounded-full object-cover grayscale" data-alt="A professional studio portrait of a confident middle-aged man with short hair and a clean-shaven face. He is wearing a premium black athletic polo shirt against a minimalist light grey background. The lighting is soft and directional, creating a high-end editorial look that aligns with a luxury fitness brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_6pNmF2BfqapZIAz3le5HgKQnOtnKeS2IjU3Qx9GrPKuMdUTz9Ojir_rxMGCmGlAKEGp7QqjCUgzQhyAe7e3pISemCIdfQnNlEq3o_ZQ8vluOtGRlvJ0IRkfmVVtN1znjw-4b0G-4WaOkqDJk8d0Y-pt_ZW8bEPVGn3xk6d8BMTm-3rMPUM3ag_WluVA1v3YLTiraletNr5TR_FpZkGF3cL17DSw73V3LCVg9kOCoQp91nJUEdBGeLVf3B-Yby7a95vlIy-WtpWg"/>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Alex Rivers</p>
+<p class="font-label-sm text-label-sm text-primary">Membre Élite</p>
+</div>
+</div>
+<span class="mt-2 inline-block px-2 py-0.5 bg-primary-container text-on-primary-container text-[10px] font-bold rounded uppercase w-fit tracking-wider">Accès Admin</span>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-4 px-4 py-3 bg-primary text-on-primary rounded-lg font-bold transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Tableau de bord</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-variant transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-label-md text-label-md">Cours</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-variant transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">Entraîneurs</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-variant transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-label-md text-label-md">Abonnements</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-variant transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Paramètres</span>
+</a>
+</nav>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 p-margin-mobile md:p-margin-desktop bg-background overflow-x-hidden">
+<!-- Dashboard Header -->
+<div class="mb-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-on-background uppercase tracking-tight">Tableau de bord</h2>
+<p class="font-body-lg text-body-lg text-secondary">Vue d'ensemble de la performance réseau FITSPACE.</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-primary text-on-primary px-6 py-3 font-label-md text-label-md uppercase tracking-wider hover:opacity-90 transition-opacity flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                        Nouveau Rapport
+                    </button>
+</div>
+</div>
+<!-- Bento Stats Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-gutter">
+<div class="bg-surface-container-lowest p-8 border border-surface-variant hover:shadow-lg transition-shadow duration-300">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary">groups</span>
+<span class="text-primary font-bold text-label-sm">+12%</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-1">Membres Totaux</p>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">12,842</h3>
+</div>
+<div class="bg-surface-container-lowest p-8 border border-surface-variant hover:shadow-lg transition-shadow duration-300">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary">event_available</span>
+<span class="text-primary font-bold text-label-sm">+5%</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-1">Réservations Actives</p>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">456</h3>
+</div>
+<div class="bg-surface-container-lowest p-8 border border-surface-variant hover:shadow-lg transition-shadow duration-300">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary">monetization_on</span>
+<span class="text-primary font-bold text-label-sm">+18%</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-1">Revenus Mensuels</p>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">84,200 €</h3>
+</div>
+</section>
+<!-- Revenue Flow & Alerts -->
+<section class="grid grid-cols-1 lg:grid-cols-4 gap-gutter mb-gutter">
+<!-- Chart Placeholder (High-end visualization representation) -->
+<div class="lg:col-span-3 bg-surface-container-lowest p-8 border border-surface-variant">
+<div class="flex justify-between items-center mb-8">
+<h4 class="font-headline-md text-headline-md uppercase">Flux de revenus</h4>
+<div class="flex gap-4">
+<span class="flex items-center gap-2 font-label-sm text-label-sm"><div class="w-3 h-3 bg-primary"></div> Abonnement</span>
+<span class="flex items-center gap-2 font-label-sm text-label-sm"><div class="w-3 h-3 bg-on-background"></div> Merchandising</span>
+</div>
+</div>
+<!-- Abstract Chart Visual -->
+<div class="h-64 w-full flex items-end gap-2 px-4 border-b border-surface-variant">
+<div class="bg-primary w-full h-[60%] opacity-20"></div>
+<div class="bg-primary w-full h-[75%] opacity-40"></div>
+<div class="bg-primary w-full h-[55%] opacity-30"></div>
+<div class="bg-primary w-full h-[90%] opacity-80"></div>
+<div class="bg-primary w-full h-[100%]"></div>
+<div class="bg-primary w-full h-[85%] opacity-60"></div>
+<div class="bg-primary w-full h-[95%] opacity-90"></div>
+</div>
+<div class="flex justify-between mt-4 text-secondary font-label-sm text-label-sm">
+<span>LUN</span><span>MAR</span><span>MER</span><span>JEU</span><span>VEN</span><span>SAM</span><span>DIM</span>
+</div>
+</div>
+<!-- Security Alerts -->
+<div class="lg:col-span-1 flex flex-col gap-4">
+<div class="bg-primary-container p-6 border-l-4 border-primary">
+<div class="flex items-center gap-2 text-on-primary-container mb-2">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+<p class="font-label-md text-label-md font-bold uppercase">Alerte Sécurité</p>
+</div>
+<p class="font-body-md text-body-md text-on-primary-container opacity-90">3 tentatives de connexion suspectes détectées à l'agence Paris XV.</p>
+<button class="mt-4 text-on-primary-container underline font-label-sm text-label-sm">Vérifier les logs</button>
+</div>
+<div class="bg-surface-container-lowest p-6 border border-surface-variant">
+<p class="font-label-sm text-label-sm text-secondary uppercase mb-2">État du système</p>
+<div class="flex items-center gap-2 mb-4">
+<div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+<span class="font-label-md text-label-md">Tous les serveurs sont opérationnels</span>
+</div>
+<div class="w-full bg-surface-variant h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[99%]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Management Shortcuts & Recent Activity -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Management Shortcuts -->
+<div class="bg-surface-container-lowest p-8 border border-surface-variant">
+<h4 class="font-headline-md text-headline-md uppercase mb-8">Gestion rapide</h4>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex flex-col items-center justify-center gap-4 p-8 border border-surface-variant hover:border-primary transition-colors group">
+<span class="material-symbols-outlined text-[32px] group-hover:text-primary transition-colors">person_add</span>
+<span class="font-label-md text-label-md uppercase font-bold">Utilisateurs</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-4 p-8 border border-surface-variant hover:border-primary transition-colors group">
+<span class="material-symbols-outlined text-[32px] group-hover:text-primary transition-colors">history_edu</span>
+<span class="font-label-md text-label-md uppercase font-bold">Cours</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-4 p-8 border border-surface-variant hover:border-primary transition-colors group">
+<span class="material-symbols-outlined text-[32px] group-hover:text-primary transition-colors">description</span>
+<span class="font-label-md text-label-md uppercase font-bold">Contenus</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-4 p-8 border border-surface-variant hover:border-primary transition-colors group">
+<span class="material-symbols-outlined text-[32px] group-hover:text-primary transition-colors">support_agent</span>
+<span class="font-label-md text-label-md uppercase font-bold">Support</span>
+</button>
+</div>
+</div>
+<!-- Recent Registrations -->
+<div class="bg-surface-container-lowest border border-surface-variant overflow-hidden">
+<div class="p-8 border-b border-surface-variant flex justify-between items-center">
+<h4 class="font-headline-md text-headline-md uppercase">Inscriptions récentes</h4>
+<span class="font-label-sm text-label-sm text-primary font-bold cursor-pointer hover:underline">Voir tout</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between p-6 hover:bg-surface-container-low transition-colors border-b border-surface-variant last:border-0">
+<div class="flex items-center gap-4">
+<img alt="Inscrit" class="w-10 h-10 rounded-full object-cover" data-alt="A portrait of a athletic young woman with a focused expression, wearing designer activewear. The lighting is crisp and cool, set against a blurred high-end gym interior with minimalist equipment. The overall aesthetic is clean, professional, and consistent with a high-luxury fitness brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzL2CxD9WBisRd-AwhPR11CctW9DLQDAAPZtp2bkoYjr9b8kp3AGdz6fFd5nQsNtHUkwoXE1iQ9AjbE4_3pmfaD7f8d86w3nraYwVK2zV8U1FFDY8n0LJRT8_ZFBy7xH84ZFbbIA8GCrYaLfGt5NwEKVOLnf-zR6lNsSx_Wd5ITfZ1OtUZ0GAFk-ES0dVQfKrzrPxlI-EV1GBVVOLFyUCaOhyrPIeRzql3WlFs3wpUVOM7ICqW-XkwQSmpu3SdFrG4DrWofM6ucdg"/>
+<div>
+<p class="font-label-md text-label-md font-bold">Sophie Martin</p>
+<p class="font-label-sm text-label-sm text-secondary">Abonnement Platine</p>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-secondary">Il y a 12 min</p>
+</div>
+<div class="flex items-center justify-between p-6 hover:bg-surface-container-low transition-colors border-b border-surface-variant last:border-0">
+<div class="flex items-center gap-4">
+<img alt="Inscrit" class="w-10 h-10 rounded-full object-cover" data-alt="A candid profile shot of a muscular man in a minimalist black workout shirt, appearing determined. The lighting is high-contrast, emphasizing strength and precision, set in a bright, modern studio environment. The style is sophisticated and minimal, mirroring the premium FITSPACE brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxaBfY6rjBhS_COFZHF3tA8HcstSAUV6GlT8gG9yn7nQxAMdEf2pHB08JdQOHGtUT7IarlLWeI2WqoH_wJ_sV8C4BwJnPQ7G9SPIWxPv_A4BzTtZaSGERuHU6rNWvTm35AmX6JtWtfZBWN25qwxQuVJ81qsK6lHbdO2WcdMZwXor93CMLkcFBPiEZ7ZRm-xY0UNnBTUD5EjydJ5cEYRp59w0UWrY8fTAXEmNvty8xw8d21C-7V8kSGV6E6-y5TJ0q7Gk-DQPBhmJI"/>
+<div>
+<p class="font-label-md text-label-md font-bold">Marc Dubois</p>
+<p class="font-label-sm text-label-sm text-secondary">Abonnement Essentiel</p>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-secondary">Il y a 45 min</p>
+</div>
+<div class="flex items-center justify-between p-6 hover:bg-surface-container-low transition-colors border-b border-surface-variant last:border-0">
+<div class="flex items-center gap-4">
+<img alt="Inscrit" class="w-10 h-10 rounded-full object-cover" data-alt="A striking and professional portrait of a woman with braided hair, smiling confidently while wearing a premium white fitness top. The background is a clean white gym wall with subtle geometric patterns. The lighting is bright and airy, capturing a high-fashion fitness aesthetic with high clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6thdSKnPsrgCSQWTceOwxJv-tJauQvDDJ6Ptbz-srAK1yODFpguyhP-S3GyvjSdeL2a5Rzl7ywRrAK3rnPuMNqUY_rTjn7QkkLGJ6jABm13tg2ShVAqLZIxwPqAttU3Xx2G4bYsuLE-htLy4ltYOuI6KSFSDzUknZ8jCZUe4MIUFMf52bXz88ulom3PhIz4OV8Sgu_FkwqkPleXVfY2i0a_jWYoO6YpUMttD8ko62VxF7kP67UX6iji4TaCrrAAEAPLuBcy23-54"/>
+<div>
+<p class="font-label-md text-label-md font-bold">Léa Roussel</p>
+<p class="font-label-sm text-label-sm text-secondary">Abonnement Élite</p>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-secondary">Il y a 1h</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t-2 border-surface-variant">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-8 gap-gutter max-w-container-max mx-auto">
+<h3 class="font-headline-md text-headline-md text-primary uppercase font-black tracking-tighter">FITSPACE</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 FITSPACE. AUCUNE EXCUSE.</p>
+<div class="flex gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Politique de confidentialité</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

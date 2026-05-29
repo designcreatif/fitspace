@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#004b74",
+                    "on-background": "#1a1c1c",
+                    "on-primary-container": "#fff9f8",
+                    "tertiary": "#005f93",
+                    "surface-dim": "#dadada",
+                    "on-secondary-fixed-variant": "#474746",
+                    "primary-fixed": "#ffdad6",
+                    "surface-container-low": "#f3f3f3",
+                    "inverse-primary": "#ffb4ac",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-tertiary-container": "#f9faff",
+                    "surface-tint": "#c00015",
+                    "on-primary-fixed-variant": "#93000d",
+                    "tertiary-fixed": "#cde5ff",
+                    "surface-container": "#eeeeee",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "primary": "#b90014",
+                    "primary-container": "#e31b23",
+                    "outline": "#926e6b",
+                    "primary-fixed-dim": "#ffb4ac",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "background": "#f9f9f9",
+                    "tertiary-container": "#0079b9",
+                    "on-secondary-container": "#636262",
+                    "outline-variant": "#e7bdb8",
+                    "surface-container-high": "#e8e8e8",
+                    "on-error": "#ffffff",
+                    "secondary": "#5f5e5e",
+                    "on-surface": "#1a1c1c",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f9f9f9",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "secondary-container": "#e2dfde",
+                    "on-primary-fixed": "#410002",
+                    "tertiary-fixed-dim": "#94ccff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "inverse-surface": "#2f3131",
+                    "on-surface-variant": "#5d3f3c",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#001d32",
+                    "surface": "#f9f9f9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "40px",
+                    "container-max-width": "1280px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Montserrat"],
+                    "label-sm": ["Montserrat"],
+                    "label-md": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-lg": ["Montserrat"],
+                    "body-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-border {
+            border-bottom: 2px solid #b90014;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background border-b-2 border-surface-variant h-16 flex justify-between items-center px-4 md:px-10">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform">menu</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:text-headline-lg italic font-black text-primary tracking-tighter uppercase">FITSPACE</h1>
+</div>
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a class="font-label-md text-label-md text-primary active-nav-border h-full flex items-center transition-colors duration-200" href="#">Tableau de bord</a>
+<a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors duration-200 h-full flex items-center" href="#">Cours</a>
+<a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors duration-200 h-full flex items-center" href="#">Entraîneurs</a>
+<a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors duration-200 h-full flex items-center" href="#">Abonnements</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface cursor-pointer hover:text-primary transition-colors">account_circle</span>
+</div>
+</header>
+<main class="mt-16">
+<!-- Hero Section -->
+<section class="relative h-[751px] w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="FITSPACE Hero" class="w-full h-full object-cover grayscale brightness-50" data-alt="A high-contrast cinematic photograph of a high-end, minimalist fitness facility. The environment is dominated by clean white architecture, polished concrete floors, and sharp linear lighting. In the foreground, professional-grade black steel strength equipment is arranged with surgical precision. The overall mood is powerful and exclusive, featuring a palette of deep blacks, pristine whites, and strategic pops of vibrant athletic red." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXeWGmpoCphKnbnSYLAANlYKhbbiZ9Wnp3gJax92Q3EvLjFe7ywmfw_fizNgDFApev_T4faQMmdGnAjoUBsPaQ6hzARfs7EBc71KbusSrYMP6hZ0mISHIm2FDqgxfZ74xW_jRvZ1Ut5YIFXrSbWj-JhXOMr_671xtpyRmCIuojzKCRcILpkNDtIcpCa28n3RU0T1VxcANGWgjyuZa6cE9qGCg_qdPpN1m6WCuR3euZacNe6diDd5tZLw6ZLTaTFFRZ6t28L-BUCGg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl space-y-6">
+<h2 class="font-headline-xl text-headline-xl text-on-background leading-tight">DÉPASSEZ VOS LIMITES. <br/><span class="text-primary italic">AUCUNE EXCUSE.</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">L'élite du fitness à portée de main. Équipements de pointe, coaching expert et une communauté dévouée à l'excellence.</p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-primary-container text-on-primary px-8 py-4 font-label-md text-label-md uppercase tracking-wider hover:opacity-90 transition-opacity active:scale-95">S'inscrire</button>
+<button class="border-2 border-on-background text-on-background px-8 py-4 font-label-md text-label-md uppercase tracking-wider hover:bg-on-background hover:text-background transition-all active:scale-95">Pass Gratuit</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Services Section -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-12">
+<h3 class="font-headline-md text-headline-md uppercase tracking-tighter flex items-center gap-2">
+<span class="w-8 h-1 bg-primary inline-block"></span>
+                    Nos Services Premium
+                </h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+<!-- Main Equipment Card -->
+<div class="md:col-span-8 bg-white border border-surface-variant overflow-hidden group relative">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close-up shot of ultra-modern, high-tech gym equipment in a bright white minimalist space. The machines are made of matte black metal and premium leather, reflecting soft studio lighting. The background is a clean white gym with polished floors and red LED accents on the walls, emphasizing a luxury athletic atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCII5J1aVt-7Km5JOP04IRELPxS7rcm3wlMgCI1Yck5IcsuhqWAYnY_aFrJBjBvohc-TFmDPZMbn9N8pej0k1SNAw4I868CF1fKaEjIgsj3LxusbASHIlLeUXgR5DqXOH2XiCDGRkF9a66hyUGZtwXYOXmnERDm4Ktud6U6_LBDNOnmGpI3iBpk46erR6xcjPdQ_NbGU_f3UdnqtPe3a2iHWRNPxcmnKFKT5AerAhtB_NVq0ipivN7HnR9-5X7YQTWPqEsldKKEFp0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 text-white">
+<h4 class="font-headline-md text-headline-md mb-2">Équipement Moderne</h4>
+<p class="font-body-md text-body-md opacity-90 max-w-md">Dernière génération de machines Hammer Strength et Eleiko pour une performance maximale.</p>
+</div>
+</div>
+<!-- Recovery Zone -->
+<div class="md:col-span-4 bg-surface-container-low border border-surface-variant p-8 flex flex-col justify-end relative overflow-hidden">
+<div class="absolute top-8 right-8">
+<span class="material-symbols-outlined text-primary text-5xl">spa</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-4 text-on-surface">Zone de Récupération</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Sauna cryothérapie, et massages sportifs pour optimiser votre progression après l'effort.</p>
+<a class="font-label-md text-label-md text-primary flex items-center gap-2 group" href="#">En savoir plus <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+</div>
+<!-- Training Support -->
+<div class="md:col-span-4 bg-primary border border-primary p-8 flex flex-col justify-between">
+<span class="material-symbols-outlined text-white text-5xl">fitness_center</span>
+<div class="text-white">
+<h4 class="font-headline-md text-headline-md mb-2">Coaching Élite</h4>
+<p class="font-body-md text-body-md opacity-90">Programmes personnalisés par des athlètes certifiés.</p>
+</div>
+</div>
+<!-- 24/7 Access -->
+<div class="md:col-span-8 bg-white border border-surface-variant p-8 flex items-center justify-between">
+<div class="max-w-md">
+<h4 class="font-headline-md text-headline-md mb-2">Liberté Totale</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Accès 24h/24 et 7j/7 pour s'adapter à votre emploi du temps, sans aucune restriction.</p>
+</div>
+<span class="text-headline-xl font-black text-surface-variant/40 hidden md:block">24/7</span>
+</div>
+</div>
+</section>
+<!-- News Section (Asymmetric Layout) -->
+<section class="py-20 bg-surface-container-lowest">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div class="max-w-xl">
+<h3 class="font-headline-lg text-headline-lg uppercase italic font-black text-on-background">L'Actualité du Club</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Restez informé des derniers événements, compétitions et nouveautés au sein de la communauté FITSPACE.</p>
+</div>
+<button class="font-label-md text-label-md uppercase border-b-2 border-primary pb-1 text-primary">Voir tout le blog</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- News Item 1 -->
+<article class="flex flex-col gap-6 group cursor-pointer">
+<div class="overflow-hidden border border-surface-variant h-64">
+<img alt="Invitational de bodybuilding" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" data-alt="A professional bodybuilding competition stage with dramatic lighting. Silhouetted athletes stand against a bright backdrop. The lighting is high-contrast, focusing on muscle definition and dynamic movement. The color palette is modern, dominated by blacks, whites, and deep red stage highlights, consistent with an elite fitness brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfdagsMd1AMBjjZL6IEs0iVcEboMM0SAn_NX7hQN0JMtC47NommRu1yXRzBbKTw3-z8DLNiunH97vsDugfTeG295_JoX-y-hdFNC1lQDTTuZj9IzILYEiS_rVH0T831CjiSIlL2JrxBbP1haTYI0ct6F3lbggDjTmOFi8v-81972Iug62yWwP2O8b5NuRa2QGx1G3itbvZqBP4-JQvlloogmFVbFjj-NnkZ8QGaySQmrIVpowCf1zqm-Luclt2ToFhZsMYJMQoms8"/>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-4 text-primary font-label-sm text-label-sm uppercase tracking-widest">
+<span>15 OCT 2024</span>
+<span class="w-1 h-1 bg-surface-variant rounded-full"></span>
+<span>Événement</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-background group-hover:text-primary transition-colors">Invitational de Bodybuilding : Ouverture des inscriptions</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Rejoignez l'élite sur scène pour notre tournoi annuel. Plus de 10 000€ de prix à gagner cette année.</p>
+</div>
+</article>
+<!-- News Item 2 -->
+<article class="flex flex-col gap-6 group cursor-pointer">
+<div class="overflow-hidden border border-surface-variant h-64">
+<img alt="Nouveaux Racks" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" data-alt="A clean, minimalist fitness studio featuring rows of brand-new, matte black power racks. The floor is industrial dark grey, and the walls are pure white with vertical red lighting strips. The space is empty of people, emphasizing the pristine and high-end nature of the new equipment. Soft, even lighting creates a high-key professional look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSSnTTo-nHkYWbJftrKA7CJSsw5vzULr4RAGsPfNQkFnWYMNtG4JcMmdZV08BkfHxqB_X8Ora3Vq7SwQRe5Z7BS1IrVhhhu2tOCYpLx1AqwALlp_g730PYoB9ko328_BqXLZuUZ9DNxpuv4xgfcAIUIa4rsgWx7p7jBUgXRLtaSLEtfhpUORSuNvVGhFmpnvjLasA9D-c9F6xFWKLnlL5BATHs2iftzhAcHU6HuMF36EAv3Pgh-6ngD0qfaKlHqwacvsQOH6jOm4E"/>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-4 text-primary font-label-sm text-label-sm uppercase tracking-widest">
+<span>08 OCT 2024</span>
+<span class="w-1 h-1 bg-surface-variant rounded-full"></span>
+<span>Équipement</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-background group-hover:text-primary transition-colors">Nouveaux Racks Eleiko : Puissance et Stabilité</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Nous venons d'installer 12 nouvelles stations de force pour réduire votre temps d'attente aux heures de pointe.</p>
+</div>
+</article>
+<!-- News Item 3 -->
+<article class="flex flex-col gap-6 group cursor-pointer">
+<div class="overflow-hidden border border-surface-variant h-64">
+<img alt="Séminaire Nutrition" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" data-alt="A bright, modern seminar room with a minimalist aesthetic. A speaker is presenting on a large screen showing nutritional charts and fitness data. The audience is composed of athletic individuals in a professional setting. The interior design features white walls, glass partitions, and red accents, maintaining a high-fashion, clean fitness brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaQ4XWGXyl40k714-z8KYAKYUfeNwOGwhX9zSDmzomzyWUa1wjW4cmAsYrbVJC1TU0Hl1asNQYZd8OgKZ1da0Fk5gxXB08gRrK-A5ngg9XgDFVGx9kJ1IFu4MtmyTYMXKQD8gnsMtDlf58MuC5AL8y-zAhFatefRy2B_8a6UDbrmagp56VrHAC0GQ8XOmvRxO488N9svB3yy-IpGyb8fp3FfHb-7yvVqTafOKN8gZby1DpN9dGpgaRwbSgribeWbNzvLV7U1_ouJw"/>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-4 text-primary font-label-sm text-label-sm uppercase tracking-widest">
+<span>29 SEPT 2024</span>
+<span class="w-1 h-1 bg-surface-variant rounded-full"></span>
+<span>Nutrition</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-background group-hover:text-primary transition-colors">Séminaire Nutrition : Optimisez vos résultats</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Apprenez les bases de la nutrition de performance avec notre nutritionniste en chef Dr. Sarah Martin.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-on-background text-background py-24 text-center px-margin-mobile">
+<div class="max-w-3xl mx-auto space-y-8">
+<h3 class="font-headline-xl text-headline-xl uppercase tracking-tighter italic">REJOIGNEZ LA RÉVOLUTION</h3>
+<p class="font-body-lg text-body-lg opacity-70">Ne remettez pas à demain ce que vous pouvez transformer aujourd'hui. Profitez de votre première séance offerte.</p>
+<div class="flex flex-wrap justify-center gap-4 pt-4">
+<button class="bg-primary-container text-on-primary px-12 py-5 font-label-md text-label-md uppercase tracking-widest font-black active:scale-95 transition-transform">S'inscrire Maintenant</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t-2 border-surface-variant py-12">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-headline-md text-headline-md text-primary uppercase font-black">FITSPACE</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 FITSPACE. AUCUNE EXCUSE.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Politique de confidentialité</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Conditions d'utilisation</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contacter le club</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Support</a>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors">public</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors">share</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors">smart_display</span>
+</div>
+</div>
+</footer>
+</body></html>

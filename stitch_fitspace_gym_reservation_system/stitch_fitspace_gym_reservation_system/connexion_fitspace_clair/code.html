@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FITSPACE - Connexion</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#004b74",
+                        "on-background": "#1a1c1c",
+                        "on-primary-container": "#fff9f8",
+                        "tertiary": "#005f93",
+                        "surface-dim": "#dadada",
+                        "on-secondary-fixed-variant": "#474746",
+                        "primary-fixed": "#ffdad6",
+                        "surface-container-low": "#f3f3f3",
+                        "inverse-primary": "#ffb4ac",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary-container": "#f9faff",
+                        "surface-tint": "#c00015",
+                        "on-primary-fixed-variant": "#93000d",
+                        "tertiary-fixed": "#cde5ff",
+                        "surface-container": "#eeeeee",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "primary": "#b90014",
+                        "primary-container": "#e31b23",
+                        "outline": "#926e6b",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9f9",
+                        "tertiary-container": "#0079b9",
+                        "on-secondary-container": "#636262",
+                        "outline-variant": "#e7bdb8",
+                        "surface-container-high": "#e8e8e8",
+                        "on-error": "#ffffff",
+                        "secondary": "#5f5e5e",
+                        "on-surface": "#1a1c1c",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "secondary-container": "#e2dfde",
+                        "on-primary-fixed": "#410002",
+                        "tertiary-fixed-dim": "#94ccff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "inverse-surface": "#2f3131",
+                        "on-surface-variant": "#5d3f3c",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#001d32",
+                        "surface": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "container-max-width": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Montserrat"],
+                        "label-sm": ["Montserrat"],
+                        "label-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .input-focus-effect:focus {
+            outline: none;
+            border-color: #1a1c1c;
+            border-width: 2px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background dark:bg-background border-b-2 border-surface-variant dark:border-outline-variant flex justify-between items-center px-margin-mobile h-16 w-full">
+<div class="flex items-center gap-4 active:scale-95 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile italic font-black text-primary tracking-tighter uppercase">FITSPACE</span>
+</div>
+<div class="active:scale-95 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-primary" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<main class="min-h-screen pt-16 flex flex-col items-center justify-center">
+<!-- Asymmetric Bento-inspired Login Layout -->
+<div class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left Side: Visual Narrative (High-Couture Fitness) -->
+<div class="hidden lg:block lg:col-span-7 h-[700px] relative overflow-hidden bg-surface-container-low rounded-xl">
+<img alt="Fitness de Luxe" class="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A high-contrast cinematic shot of a luxury minimalist gym interior with marble floors and polished black fitness equipment. The lighting is dramatic, high-key, casting sharp shadows and highlighting the clean architectural lines of the space. Red neon accents pierce through the monochrome palette, reflecting off sleek surfaces. The atmosphere is sophisticated, elite, and intensely focused on performance and modern design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7MbuzmXUOvxshngsVxgfFODS-BfpOeMOLkxzI3kiFYmIUL7Sop69GlMYCgvrWxSXTjft9d9Cd0Nm86pQawIKYcOKL0Bv-HnqqOEXvPXyqhFz_B8paw6cacM_dDY1vnICdVOatOw3Scq6QQahCa9cYcG4g0B-2Cyx4Mn_yvENIGS2AiIG3l70iugZDhtPAGqTNshyAhU-yOnYUhzLNmsUdVd0keU6GocnkakwXEBGGYNcMxfRjJmk0cB9LLvjWF4Wbx8zUx-EUTzE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-12 text-white">
+<h2 class="font-headline-xl text-headline-xl mb-4">REPOUSSEZ VOS LIMITES.</h2>
+<p class="font-body-lg text-body-lg max-w-md opacity-90">L'excellence n'est pas un acte, mais une habitude. Bienvenue dans l'espace où la précision rencontre la puissance.</p>
+</div>
+</div>
+<!-- Right Side: Login Form -->
+<div class="lg:col-span-5 flex flex-col gap-8 bg-surface-container-lowest p-8 md:p-12 border border-surface-variant rounded-xl">
+<div class="space-y-2">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Connexion</h1>
+<p class="font-body-md text-body-md text-secondary">Entrez vos identifiants pour accéder à votre espace membre.</p>
+</div>
+<form class="flex flex-col gap-6">
+<!-- Email Field -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider" for="username">E-mail ou Nom d'utilisateur</label>
+<div class="relative">
+<input class="w-full h-14 px-4 bg-white border border-surface-variant font-body-md input-focus-effect transition-all duration-200" id="username" placeholder="alex.rivers@fitspace.com" type="text"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider" for="password">Mot de passe</label>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">Mot de passe oublié ?</a>
+</div>
+<div class="relative">
+<input class="w-full h-14 px-4 bg-white border border-surface-variant font-body-md input-focus-effect transition-all duration-200" id="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<!-- Login Button -->
+<button class="w-full h-14 bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-widest hover:bg-primary transition-colors duration-300 active:scale-95 cursor-pointer" type="submit">
+                        Se Connecter
+                    </button>
+</form>
+<div class="flex flex-col gap-4 items-center">
+<div class="w-full h-px bg-surface-variant"></div>
+<p class="font-body-md text-body-md text-secondary">Pas encore de compte ?</p>
+<button class="w-full h-14 border-2 border-on-surface text-on-surface font-label-md text-label-md uppercase tracking-widest hover:bg-on-surface hover:text-white transition-all duration-300 active:scale-95 cursor-pointer">
+                        Devenir membre
+                    </button>
+</div>
+<!-- Trust Badges or Minimalist Info -->
+<div class="flex justify-center gap-6 pt-4 opacity-50">
+<span class="material-symbols-outlined text-2xl" data-icon="verified_user">verified_user</span>
+<span class="material-symbols-outlined text-2xl" data-icon="lock">lock</span>
+<span class="material-symbols-outlined text-2xl" data-icon="security">security</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t-2 border-surface-variant dark:border-outline-variant w-full">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile py-8 gap-gutter max-w-container-max mx-auto w-full">
+<div class="font-headline-md text-headline-md text-primary uppercase font-black tracking-tighter italic">FITSPACE</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Politique de confidentialité</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Conditions d'utilisation</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Contacter le club</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Support</a>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant opacity-60">© 2024 FITSPACE. AUCUNE EXCUSE.</div>
+</div>
+</footer>
+</body></html>

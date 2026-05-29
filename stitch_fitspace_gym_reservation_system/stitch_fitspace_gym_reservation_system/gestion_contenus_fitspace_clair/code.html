@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FITSPACE Admin - Gestion des Contenus</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#004b74",
+                    "on-background": "#1a1c1c",
+                    "on-primary-container": "#fff9f8",
+                    "tertiary": "#005f93",
+                    "surface-dim": "#dadada",
+                    "on-secondary-fixed-variant": "#474746",
+                    "primary-fixed": "#ffdad6",
+                    "surface-container-low": "#f3f3f3",
+                    "inverse-primary": "#ffb4ac",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-tertiary-container": "#f9faff",
+                    "surface-tint": "#c00015",
+                    "on-primary-fixed-variant": "#93000d",
+                    "tertiary-fixed": "#cde5ff",
+                    "surface-container": "#eeeeee",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "primary": "#b90014",
+                    "primary-container": "#e31b23",
+                    "outline": "#926e6b",
+                    "primary-fixed-dim": "#ffb4ac",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "background": "#f9f9f9",
+                    "tertiary-container": "#0079b9",
+                    "on-secondary-container": "#636262",
+                    "outline-variant": "#e7bdb8",
+                    "surface-container-high": "#e8e8e8",
+                    "on-error": "#ffffff",
+                    "secondary": "#5f5e5e",
+                    "on-surface": "#1a1c1c",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f9f9f9",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "secondary-container": "#e2dfde",
+                    "on-primary-fixed": "#410002",
+                    "tertiary-fixed-dim": "#94ccff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "inverse-surface": "#2f3131",
+                    "on-surface-variant": "#5d3f3c",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#001d32",
+                    "surface": "#f9f9f9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "40px",
+                    "container-max-width": "1280px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Montserrat"],
+                    "label-sm": ["Montserrat"],
+                    "label-md": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-lg": ["Montserrat"],
+                    "body-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Montserrat', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background border-b-2 border-surface-variant flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform">menu</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:text-headline-md italic font-black text-primary tracking-tighter uppercase">FITSPACE</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface hover:text-primary transition-colors cursor-pointer active:scale-95">account_circle</span>
+</div>
+</header>
+<div class="flex pt-16">
+<!-- NavigationDrawer (Visible on desktop) -->
+<aside class="hidden md:flex flex-col h-[calc(100vh-64px)] w-72 p-4 gap-2 bg-surface-container-low border-r border-surface-variant sticky top-16">
+<div class="flex flex-col mb-6 px-2">
+<span class="font-headline-md text-headline-md font-black text-primary">Alex Rivers</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Membre Élite</span>
+<span class="font-label-sm text-label-sm text-primary uppercase mt-1">Accès Admin</span>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant transition-all cursor-pointer rounded-lg">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Tableau de bord</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary text-on-primary rounded-lg font-bold cursor-pointer">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-label-md text-label-md">Cours</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant transition-all cursor-pointer rounded-lg">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">Entraîneurs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant transition-all cursor-pointer rounded-lg">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-label-md text-label-md">Abonnements</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant transition-all cursor-pointer rounded-lg">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Paramètres</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-on-background">Gestion des Contenus</h2>
+<p class="font-body-lg text-body-lg text-secondary mt-2">Gérez vos articles, vidéos et guides d'entraînement.</p>
+</div>
+<button class="bg-primary-container text-on-primary px-8 py-4 rounded-lg font-bold flex items-center gap-2 active:scale-95 transition-transform shadow-sm hover:shadow-md">
+<span class="material-symbols-outlined">add</span>
+                    Nouveau Contenu
+                </button>
+</div>
+<!-- Bento Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-12">
+<div class="bg-surface-container-lowest border border-surface-variant p-8 rounded-xl">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Articles Publiés</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-headline-xl text-headline-xl text-on-background">124</span>
+<span class="text-primary font-bold text-label-md">+12%</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-surface-variant p-8 rounded-xl">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Brouillons en cours</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-headline-xl text-headline-xl text-on-background">18</span>
+<span class="text-tertiary font-bold text-label-md">Actifs</span>
+</div>
+</div>
+<div class="bg-primary text-on-primary p-8 rounded-xl flex flex-col justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-primary/80 uppercase tracking-widest">Taux d'Engagement</span>
+<div class="text-4xl font-black mt-2">84.2%</div>
+</div>
+<div class="h-1 bg-on-primary/20 w-full mt-4 rounded-full overflow-hidden">
+<div class="h-full bg-on-primary w-[84%]"></div>
+</div>
+</div>
+</div>
+<!-- Content List -->
+<section class="bg-surface-container-lowest border border-surface-variant rounded-xl overflow-hidden mb-8">
+<div class="p-6 border-b border-surface-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<h3 class="font-headline-md text-headline-md">Tous les contenus</h3>
+<div class="relative w-full md:w-64">
+<input class="w-full pl-10 pr-4 py-2 bg-background border border-surface-variant rounded focus:border-on-background focus:ring-0 transition-all outline-none" placeholder="Rechercher..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-sm">search</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container">
+<tr>
+<th class="p-4 font-label-md text-label-md text-secondary uppercase">Aperçu</th>
+<th class="p-4 font-label-md text-label-md text-secondary uppercase">Titre &amp; Catégorie</th>
+<th class="p-4 font-label-md text-label-md text-secondary uppercase">Statut</th>
+<th class="p-4 font-label-md text-label-md text-secondary uppercase">Date</th>
+<th class="p-4 font-label-md text-label-md text-secondary uppercase text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-variant">
+<!-- Row 1 -->
+<tr class="hover:bg-background transition-colors group">
+<td class="p-4">
+<div class="w-20 h-14 bg-surface-container-highest rounded overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="A high-contrast fitness photograph featuring a person performing a high-intensity workout in a brightly lit, minimalist gym environment. The lighting is crisp and cool, highlighting muscle definition and movement. The background is a clean, neutral gray that emphasizes the subject's energy. The aesthetic is modern and premium, consistent with a high-end sports brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxBoVybRrPIBjgZHcjVDAIREa2nycJe-Ye7s8Atd3nf96MkqDIe_XlNvl_hAXTuu6nqFSlEFamK4DWG0rc_FblSamhniETMzzATtRvJ8zBqSRz2qRTw3G7VJmSC7NzbMZNBoyWL3XL8Ovx8gn5bms7P3XAJkEjBZbo4_nXHwKCzT_aP5AZMF-DC5RLi8oyek58UtwF1fx7PdZf9V2L6a3Fop8YxNv9NgnLLIkVyXt9sAA4xU7PgOyDk3l9es_DzaFA8L_lsxGqXN4"/>
+</div>
+</td>
+<td class="p-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Explosivité HIIT : Guide Complet</span>
+<span class="text-primary font-bold text-[10px] uppercase tracking-tighter mt-1 flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> HIIT
+                                        </span>
+</div>
+</td>
+<td class="p-4">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-black uppercase rounded-full">Publié</span>
+</td>
+<td class="p-4 font-body-md text-body-md text-on-surface-variant">12 Oct 2023</td>
+<td class="p-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 hover:text-primary transition-colors"><span class="material-symbols-outlined">edit</span></button>
+<button class="p-2 hover:text-error transition-colors"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-background transition-colors group">
+<td class="p-4">
+<div class="w-20 h-14 bg-surface-container-highest rounded overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="A macro shot of a scientific nutrition experiment with sleek glassware on a white laboratory table. The scene is illuminated by soft, diffused daylight, creating a clean and clinical light-mode aesthetic. Minimalist equipment and a sharp focus on textures evoke a sense of precision and luxury. The color palette is dominated by whites and grays with subtle metallic accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHETiRip4LWhSXw9pqcMJA7cIzbCruXMwRysNljBKuWdEpS3rUzOOZsvOb-HVWmppwQX1osrL28kE0FHd2UaX6QmdXwPzG_yzxFAncEfztZ7mgQ6uxuP3xGQ5DP5drVhXaaywoSJWBtC37xO-nrbSGe21b0AyEsg0LnZpDWSwAIXxzb51AtW8jIce0HNeEjDuaEo4Zg8rIhV9RaUGh9BXtRt-bGjwqzhgek4da2q_YN55x8GfXoHyqn1TgpSDHirp_Ut2Ni6QLFEw"/>
+</div>
+</td>
+<td class="p-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">La Science de la Récupération</span>
+<span class="text-tertiary font-bold text-[10px] uppercase tracking-tighter mt-1 flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span> Science
+                                        </span>
+</div>
+</td>
+<td class="p-4">
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[10px] font-black uppercase rounded-full">Brouillon</span>
+</td>
+<td class="p-4 font-body-md text-body-md text-on-surface-variant">15 Oct 2023</td>
+<td class="p-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 hover:text-primary transition-colors"><span class="material-symbols-outlined">edit</span></button>
+<button class="p-2 hover:text-error transition-colors"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-background transition-colors group border-l-4 border-primary">
+<td class="p-4">
+<div class="w-20 h-14 bg-surface-container-highest rounded overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="A dynamic wide-angle shot of a state-of-the-art cardio zone in a luxury fitness club. The space is filled with high-end equipment arranged with architectural precision. Large floor-to-ceiling windows flood the room with natural morning light, maintaining a bright and airy atmosphere. The design is sleek and minimalist, utilizing premium materials and a professional color scheme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD775dgpffZW9ibAOBum35gUlg4qjd-x6VBLl8dzBUnxmW_rqq1UTIRl6kCWKte8rCmTRonAYsFftmUvj3c6_44HbjC2OdL7bmuj9-MxeFDom9NV8JnCf-FQIFFMLRvnRitGUljJKYMuwzorPxe9fROMkUTzs-iZ9aK5DIV1qru5Xo_N-XHSlNdtPZbfjJptpVO3WtaPHljJahiXdl5nHDyt_-3JGAi9l9ldMBlzvco7Fxf4-mZ2SrmlsNKIZS1tYAQSNEDL2zuGvE"/>
+</div>
+</td>
+<td class="p-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Cardio : Endurance vs Puissance</span>
+<span class="text-primary font-bold text-[10px] uppercase tracking-tighter mt-1 flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Cardio
+                                        </span>
+</div>
+</td>
+<td class="p-4">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-black uppercase rounded-full">Publié</span>
+</td>
+<td class="p-4 font-body-md text-body-md text-on-surface-variant">18 Oct 2023</td>
+<td class="p-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 hover:text-primary transition-colors"><span class="material-symbols-outlined">edit</span></button>
+<button class="p-2 hover:text-error transition-colors"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="p-6 border-t border-surface-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-label-sm text-label-sm text-secondary">Affichage de 1-10 sur 142 contenus</span>
+<div class="flex gap-2">
+<button class="px-4 py-2 border border-surface-variant rounded hover:bg-surface-variant transition-colors active:scale-95">
+<span class="material-symbols-outlined text-sm align-middle">chevron_left</span>
+</button>
+<button class="px-4 py-2 bg-primary text-on-primary font-bold rounded">1</button>
+<button class="px-4 py-2 border border-surface-variant rounded hover:bg-surface-variant transition-colors">2</button>
+<button class="px-4 py-2 border border-surface-variant rounded hover:bg-surface-variant transition-colors">3</button>
+<button class="px-4 py-2 border border-surface-variant rounded hover:bg-surface-variant transition-colors active:scale-95">
+<span class="material-symbols-outlined text-sm align-middle">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t-2 border-surface-variant">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile py-8 gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-headline-md text-headline-md text-primary uppercase font-black tracking-tighter">FITSPACE</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-2 uppercase font-bold tracking-widest">© 2024 FITSPACE. AUCUNE EXCUSE.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Politique de confidentialité</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Conditions d'utilisation</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Contacter le club</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

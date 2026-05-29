@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#004b74",
+                        "on-background": "#1a1c1c",
+                        "on-primary-container": "#fff9f8",
+                        "tertiary": "#005f93",
+                        "surface-dim": "#dadada",
+                        "on-secondary-fixed-variant": "#474746",
+                        "primary-fixed": "#ffdad6",
+                        "surface-container-low": "#f3f3f3",
+                        "inverse-primary": "#ffb4ac",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary-container": "#f9faff",
+                        "surface-tint": "#c00015",
+                        "on-primary-fixed-variant": "#93000d",
+                        "tertiary-fixed": "#cde5ff",
+                        "surface-container": "#eeeeee",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "primary": "#b90014",
+                        "primary-container": "#e31b23",
+                        "outline": "#926e6b",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9f9",
+                        "tertiary-container": "#0079b9",
+                        "on-secondary-container": "#636262",
+                        "outline-variant": "#e7bdb8",
+                        "surface-container-high": "#e8e8e8",
+                        "on-error": "#ffffff",
+                        "secondary": "#5f5e5e",
+                        "on-surface": "#1a1c1c",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "secondary-container": "#e2dfde",
+                        "on-primary-fixed": "#410002",
+                        "tertiary-fixed-dim": "#94ccff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "inverse-surface": "#2f3131",
+                        "on-surface-variant": "#5d3f3c",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#001d32",
+                        "surface": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "container-max-width": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Montserrat"],
+                        "label-sm": ["Montserrat"],
+                        "label-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .form-input:focus {
+            border-color: #1a1c1c;
+            border-width: 2px;
+            outline: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background">
+<!-- Header / Brand Anchor (Minimized for Transactional Flow) -->
+<header class="fixed top-0 w-full z-50 flex justify-center items-center h-16 bg-background border-b border-surface-variant">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg italic font-black text-primary tracking-tighter uppercase">FITSPACE</h1>
+</header>
+<main class="min-h-screen flex items-center justify-center pt-24 pb-12 px-margin-mobile">
+<div class="max-w-[1000px] w-full grid grid-cols-1 md:grid-cols-2 bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden">
+<!-- Left Side: Visual/Brand Content -->
+<div class="relative hidden md:flex flex-col justify-end p-margin-desktop text-white bg-on-background">
+<img alt="Fitness Inspiration" class="absolute inset-0 w-full h-full object-cover opacity-60" data-alt="A cinematic, high-contrast photograph of a professional athlete training in a minimalist, modern gymnasium. The lighting is dramatic and moody, featuring sharp highlights and deep shadows that emphasize muscle definition and grit. The setting is immaculately clean with industrial concrete textures and bold red lighting accents reflecting off sleek fitness equipment. The overall aesthetic is high-end, powerful, and focused, perfectly aligning with a luxury haute-couture fitness brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvkLIs-fNPUQqjn0grfpCIyRIDLlFlAfv8e5LoKXLiZipV6oYsKM0lyGWGWjQLU7aaSeMAHCN9P-a27Xy6lbLQ_6PTLObviHyOo7mAZsdYmmKObY-3unm3FUvSUiolCV3v0f0cYLtwWxrSmiatiQ01_3uAQUwK5X57jd4EbG9Dc0T_dfj1Qtem0vx9i3jKCL7l-4hsQqEWoSmLjSiVwjcSFNVCpa7xzcCRVjJ6jd9xUmy9P3XCkmxWuCXlZKvgta3q2w4cBMbTZV0"/>
+<div class="relative z-10">
+<h2 class="font-headline-xl text-headline-xl mb-4 leading-none uppercase">AUCUNE<br/>EXCUSE.</h2>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-sm">Rejoignez l'élite et transformez votre vision en réalité avec FITSPACE.</p>
+</div>
+</div>
+<!-- Right Side: Signup Form -->
+<div class="p-8 md:p-12 flex flex-col justify-center">
+<div class="mb-8">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Créer un Compte</h2>
+<p class="font-body-md text-body-md text-secondary">Commencez votre voyage vers l'excellence aujourd'hui.</p>
+</div>
+<form action="#" class="space-y-5">
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="prenom">Prénom</label>
+<input class="form-input w-full p-3 bg-white border border-surface-variant font-body-md text-body-md rounded-none" id="prenom" name="prenom" placeholder="Jean" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="nom">Nom</label>
+<input class="form-input w-full p-3 bg-white border border-surface-variant font-body-md text-body-md rounded-none" id="nom" name="nom" placeholder="Dupont" required="" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="username">Nom d'utilisateur</label>
+<input class="form-input w-full p-3 bg-white border border-surface-variant font-body-md text-body-md rounded-none" id="username" name="username" placeholder="jdupont_fit" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="email">Email</label>
+<input class="form-input w-full p-3 bg-white border border-surface-variant font-body-md text-body-md rounded-none" id="email" name="email" placeholder="jean.dupont@email.com" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="password">Mot de passe</label>
+<input class="form-input w-full p-3 bg-white border border-surface-variant font-body-md text-body-md rounded-none" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<p class="font-label-sm text-label-sm text-secondary">Minimum 8 caractères.</p>
+</div>
+<div class="flex items-start gap-3 py-2">
+<div class="flex items-center h-5">
+<input class="w-5 h-5 border-surface-variant text-primary focus:ring-primary-container rounded-none cursor-pointer" id="terms" required="" type="checkbox"/>
+</div>
+<label class="font-body-md text-body-md text-on-surface-variant" for="terms">
+                            J'accepte les <a class="text-primary font-bold hover:underline" href="#">Conditions d'utilisation</a> et la <a class="text-primary font-bold hover:underline" href="#">Politique de confidentialité</a>.
+                        </label>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-4 font-label-md text-label-md uppercase tracking-widest hover:opacity-90 active:scale-[0.98] transition-all duration-200" type="submit">
+                        Créer un Compte
+                    </button>
+</form>
+<p class="mt-8 text-center font-body-md text-body-md text-on-surface-variant">
+                    Vous avez déjà un compte ? 
+                    <a class="text-primary font-bold hover:underline" href="#">Se connecter</a>
+</p>
+</div>
+</div>
+</main>
+<!-- Footer Section from Shared Components JSON -->
+<footer class="bg-surface-container-lowest border-t-2 border-surface-variant">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile py-8 gap-gutter max-w-container-max mx-auto w-full">
+<div class="font-headline-md text-headline-md text-primary uppercase font-black">FITSPACE</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Politique de confidentialité</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Conditions d'utilisation</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contacter le club</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Support</a>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">© 2024 FITSPACE. AUCUNE EXCUSE.</p>
+</div>
+</footer>
+</body></html>

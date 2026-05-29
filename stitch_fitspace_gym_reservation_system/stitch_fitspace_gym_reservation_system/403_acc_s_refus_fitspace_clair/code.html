@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#004b74",
+                        "on-background": "#1a1c1c",
+                        "on-primary-container": "#fff9f8",
+                        "tertiary": "#005f93",
+                        "surface-dim": "#dadada",
+                        "on-secondary-fixed-variant": "#474746",
+                        "primary-fixed": "#ffdad6",
+                        "surface-container-low": "#f3f3f3",
+                        "inverse-primary": "#ffb4ac",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary-container": "#f9faff",
+                        "surface-tint": "#c00015",
+                        "on-primary-fixed-variant": "#93000d",
+                        "tertiary-fixed": "#cde5ff",
+                        "surface-container": "#eeeeee",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "primary": "#b90014",
+                        "primary-container": "#e31b23",
+                        "outline": "#926e6b",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9f9",
+                        "tertiary-container": "#0079b9",
+                        "on-secondary-container": "#636262",
+                        "outline-variant": "#e7bdb8",
+                        "surface-container-high": "#e8e8e8",
+                        "on-error": "#ffffff",
+                        "secondary": "#5f5e5e",
+                        "on-surface": "#1a1c1c",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "secondary-container": "#e2dfde",
+                        "on-primary-fixed": "#410002",
+                        "tertiary-fixed-dim": "#94ccff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "inverse-surface": "#2f3131",
+                        "on-surface-variant": "#5d3f3c",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#001d32",
+                        "surface": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "container-max-width": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Montserrat"],
+                        "label-sm": ["Montserrat"],
+                        "label-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background dark:bg-background border-b-2 border-surface-variant dark:border-outline-variant flex justify-between items-center px-margin-mobile h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary cursor-pointer active:scale-95 transition-transform" data-icon="menu">menu</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile italic font-black text-primary tracking-tighter uppercase">FITSPACE</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary cursor-pointer active:scale-95 transition-transform" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<!-- Main Content Canvas (403 Error Page) -->
+<main class="flex-grow flex flex-col items-center justify-center pt-16 px-margin-mobile">
+<div class="max-w-container-max w-full mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center py-12">
+<!-- Content Section -->
+<div class="md:col-span-6 flex flex-col gap-6 order-2 md:order-1">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-[48px]" data-icon="shield_lock" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+<span class="font-headline-md text-headline-md font-bold uppercase tracking-widest">Erreur 403</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-background">Accès refusé.</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-lg">
+                        Désolé, l'accès à cette zone est strictement <span class="font-bold text-on-background">réservé aux administrateurs</span> de FITSPACE. Vos identifiants actuels ne permettent pas de franchir ce palier.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<button class="bg-primary text-on-primary px-8 py-4 font-label-md text-label-md rounded uppercase tracking-widest hover:bg-on-primary-fixed-variant transition-colors active:scale-95 duration-200 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                        Retour à l'accueil
+                    </button>
+<button class="border-2 border-on-background text-on-background px-8 py-4 font-label-md text-label-md rounded uppercase tracking-widest hover:bg-surface-variant transition-colors active:scale-95 duration-200 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+                        Contacter le club
+                    </button>
+</div>
+<div class="mt-8 p-6 border-l-4 border-primary bg-surface-container-low flex flex-col gap-2">
+<span class="font-label-md text-label-md text-primary uppercase">Code de sécurité</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Si vous pensez qu'il s'agit d'une erreur technique, veuillez fournir l'ID de session <code class="bg-surface-variant px-2 py-1 rounded">FS-403-AUTH-092</code> à notre équipe support.
+                    </p>
+</div>
+</div>
+<!-- Image Section -->
+<div class="md:col-span-6 order-1 md:order-2">
+<div class="relative aspect-square md:aspect-[4/5] w-full bg-surface-container-highest overflow-hidden rounded-lg">
+<img alt="Salle de musculation vide" class="w-full h-full object-cover grayscale-[0.5] contrast-[1.1]" data-alt="A high-end, minimalist fitness club interior featuring rows of premium black weightlifting equipment and dumbbells. The space is vast and currently empty, creating a silent and exclusive atmosphere. The lighting is bright and high-key, emphasizing clean lines and pristine white walls. The scene is captured in a professional architectural photography style with a focus on luxury, silence, and the signature FITSPACE red accents on the equipment details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXaVIcZRsvqWP4JRNl4Hxj14O_07wSlNChOpraqgvckLoEbuLub6TCwsysX-WvmG1VJcRIuCJmmlR0kE1I6vEVMtxPrcz7TqhBDR7xsYiUKsCriSHhnRqBQV1EFXNp_sL38geYiLCWDFadmr_tNGhW5ryUGoDjvTABOjAlyQ1FkKLyGKzanzXQTjsZhOOr_7EzU3qkLykKeQ_iSCRl-uFAN8NKlHa6o9gxbxuEW8WLXBr7pdXYhBSO4zGygZPreq_XxMxkn5Um0Qs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8">
+<div class="bg-white/90 backdrop-blur-md p-6 border-l-8 border-primary shadow-xl">
+<span class="font-headline-md text-headline-md italic font-black text-on-background block">AUCUNE EXCUSE.</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-tighter">Sauf celle-ci.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t-2 border-surface-variant dark:border-outline-variant w-full">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile py-8 gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<span class="font-headline-md text-headline-md text-primary uppercase font-black">FITSPACE</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">© 2024 FITSPACE. AUCUNE EXCUSE.</span>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Politique de confidentialité</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Conditions d'utilisation</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contacter le club</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

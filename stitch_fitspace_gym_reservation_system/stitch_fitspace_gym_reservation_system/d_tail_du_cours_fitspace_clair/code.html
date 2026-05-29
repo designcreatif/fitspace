@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#004b74",
+                        "on-background": "#1a1c1c",
+                        "on-primary-container": "#fff9f8",
+                        "tertiary": "#005f93",
+                        "surface-dim": "#dadada",
+                        "on-secondary-fixed-variant": "#474746",
+                        "primary-fixed": "#ffdad6",
+                        "surface-container-low": "#f3f3f3",
+                        "inverse-primary": "#ffb4ac",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary-container": "#f9faff",
+                        "surface-tint": "#c00015",
+                        "on-primary-fixed-variant": "#93000d",
+                        "tertiary-fixed": "#cde5ff",
+                        "surface-container": "#eeeeee",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "primary": "#b90014",
+                        "primary-container": "#e31b23",
+                        "outline": "#926e6b",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9f9",
+                        "tertiary-container": "#0079b9",
+                        "on-secondary-container": "#636262",
+                        "outline-variant": "#e7bdb8",
+                        "surface-container-high": "#e8e8e8",
+                        "on-error": "#ffffff",
+                        "secondary": "#5f5e5e",
+                        "on-surface": "#1a1c1c",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "secondary-container": "#e2dfde",
+                        "on-primary-fixed": "#410002",
+                        "tertiary-fixed-dim": "#94ccff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "inverse-surface": "#2f3131",
+                        "on-surface-variant": "#5d3f3c",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#001d32",
+                        "surface": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "container-max-width": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Montserrat"],
+                        "label-sm": ["Montserrat"],
+                        "label-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background border-b-2 border-surface-variant flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform">menu</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile md:text-headline-md italic font-black text-primary tracking-tighter uppercase">FITSPACE</span>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors" href="#">Tableau de bord</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary" href="#">Cours</a>
+<a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors" href="#">Entraîneurs</a>
+</nav>
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform">account_circle</span>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-16">
+<!-- Hero Section -->
+<section class="relative h-[530px] md:h-[663px] w-full overflow-hidden">
+<img alt="CrossFit Elite Training" class="w-full h-full object-cover grayscale-[20%]" data-alt="A high-intensity CrossFit training session in a cavernous, industrial-style gym. Athletes are captured in mid-motion using heavy ropes and lifting weights, illuminated by dramatic shafts of natural light and overhead studio lighting. The color palette is dominated by stark whites, deep greys, and vibrant red accents on the gym equipment, maintaining a clean and minimalist high-couture aesthetic. The mood is energetic, focused, and professional, embodying the grit and precision of elite fitness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk2dMko404QCwFHDexA6srkpalbfL_sXKpe69pEARfTUe2XOGUwQYloeKDB1QLIeqaAs7jfnY_7bTH52Je_CLZidja8hEZuTf1bFJ95Kfyv9bVy4ZQvyP2k5KbD5f4VURQGjxCb0h2W6NWlA1jSTgU8tQ_U7rLnMMJuy0cebe4MFPfo05pSltnfVPauHZ1XYovrujkmBcT-qT7bCF6sGAg0w-dVBrG9cGIGzwyvM_tqwScu1SuZkmyJkPDBhrlv-kYM2jUIBrJQIA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-margin-mobile md:p-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<span class="inline-block bg-primary text-on-primary px-3 py-1 font-label-sm text-label-sm uppercase tracking-widest mb-4">Niveau Avancé</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface max-w-2xl mb-2">CrossFit Elite</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl">Repoussez les limites de la performance athlétique dans notre environnement haute-fidélité.</p>
+</div>
+</div>
+</section>
+<!-- Course Details Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Left Column: Mission & Features -->
+<div class="md:col-span-8 space-y-12">
+<!-- Mission Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-gutter bg-surface-container-lowest p-8 border border-surface-variant">
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="fitness_center">fitness_center</span>
+<h3 class="font-headline-md text-headline-md">Force</h3>
+<p class="font-body-md text-body-md text-secondary">Développement de la puissance brute et de la densité musculaire via des charges olympiques.</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="speed">speed</span>
+<h3 class="font-headline-md text-headline-md">Endurance</h3>
+<p class="font-body-md text-body-md text-secondary">Conditionnement métabolique intense pour une résilience cardiovasculaire totale.</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="psychology">psychology</span>
+<h3 class="font-headline-md text-headline-md">Mental</h3>
+<p class="font-body-md text-body-md text-secondary">Discipline et dépassement de soi dans chaque répétition, chaque seconde de travail.</p>
+</div>
+</div>
+<!-- Description -->
+<div class="space-y-4">
+<h2 class="font-headline-lg text-headline-lg border-l-4 border-primary pl-4 uppercase">L'expérience</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            Le cours CrossFit Elite est conçu pour les athlètes cherchant à optimiser leur potentiel. Sous la direction d'Alex Rivers, vous participerez à une programmation rigoureuse mêlant gymnastique, haltérophilie et cardio haute intensité. Ici, chaque détail compte : de la précision du mouvement à l'intensité de l'effort. 
+                        </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            Notre espace est équipé des dernières technologies de suivi de performance, garantissant que chaque goutte de sueur se transforme en progrès mesurable. Rejoignez une communauté qui refuse la médiocrité.
+                        </p>
+</div>
+<!-- Stats / Details -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="border border-surface-variant p-6 text-center">
+<p class="font-label-sm text-label-sm text-secondary uppercase mb-2">Capacité</p>
+<p class="font-headline-md text-headline-md">12 Pers.</p>
+</div>
+<div class="border border-surface-variant p-6 text-center">
+<p class="font-label-sm text-label-sm text-secondary uppercase mb-2">Intensité</p>
+<p class="font-headline-md text-headline-md text-primary">Extreme</p>
+</div>
+<div class="border border-surface-variant p-6 text-center">
+<p class="font-label-sm text-label-sm text-secondary uppercase mb-2">Durée</p>
+<p class="font-headline-md text-headline-md">75 Min</p>
+</div>
+<div class="border border-surface-variant p-6 text-center">
+<p class="font-label-sm text-label-sm text-secondary uppercase mb-2">Brûlage</p>
+<p class="font-headline-md text-headline-md">800+ Kcal</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Coach & CTA Sticky -->
+<div class="md:col-span-4">
+<div class="sticky top-24 space-y-6">
+<!-- Coach Profile -->
+<div class="bg-surface-container-low border border-surface-variant p-6 overflow-hidden">
+<div class="flex items-center gap-4 mb-6">
+<img alt="Alex Rivers Coach" class="w-16 h-16 rounded-full object-cover border-2 border-primary" data-alt="A professional headshot of a fitness coach with a focused and determined expression. The background is a minimalist gym interior with clean lines and soft lighting. The styling is high-end athletic wear in monochromatic tones, emphasizing a professional and elite fitness persona. The lighting is crisp, highlighting facial features with a cinematic quality, consistent with a luxury fitness brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx715x-tqaS8sZN0bvYmL3d8uVoS33eAP11iGsar7bOfz4YjLn8CyG6orHod8_S_sDJfSfe1fYFjR_EqaByxTSVBqad6AdHQGhIrdWfo1gfufKQ9PHQZYrk41D247vTkFZ77lFVFEyHKgLJMa3HPSKnHtiT8JOTPdWy6UfAA8uoDgYKz1fEp7u23eY4op2MyMX7fh6wBGzfx9wIy0eIwwgPMmjl4ZYGjah33YhCGum-OxjfEgrnrkltBu_JLYidd5OzuLEltiGjUI"/>
+<div>
+<h4 class="font-headline-md text-headline-md leading-tight">Alex Rivers</h4>
+<p class="font-label-md text-label-md text-primary uppercase">Head Coach CrossFit</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-4 italic">"Votre seule limite est celle que vous vous imposez. Je suis là pour m'assurer que vous la franchissez."</p>
+<button class="w-full py-3 border border-on-surface font-label-md text-label-md uppercase tracking-widest hover:bg-on-surface hover:text-background transition-all active:scale-95">Voir le profil complet</button>
+</div>
+<!-- Booking Widget -->
+<div class="bg-surface-container-lowest border-2 border-primary p-6 space-y-4">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-md text-label-md text-secondary uppercase">Prochain Cours</span>
+<span class="bg-primary text-on-primary px-2 py-0.5 font-label-sm text-label-sm">4 places restantes</span>
+</div>
+<div class="space-y-1">
+<p class="font-headline-md text-headline-md">Lundi, 18:30</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Session de Soirée • Main Box</p>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-5 font-headline-md text-headline-md uppercase tracking-tight hover:brightness-110 active:scale-95 transition-all">
+                                Réserver Maintenant
+                            </button>
+<p class="font-label-sm text-label-sm text-center text-secondary">Annulation gratuite jusqu'à 12h avant le cours.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Asymmetric Layout: Schedule / Other classes -->
+<section class="bg-surface-container-lowest py-20 border-t border-surface-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-12 items-start">
+<div class="md:w-1/3">
+<h2 class="font-headline-xl text-headline-xl uppercase tracking-tighter mb-6">Plan de la Semaine</h2>
+<p class="font-body-lg text-body-lg text-secondary">Consultez les autres créneaux Elite ou découvrez nos séances complémentaires de récupération.</p>
+<a class="inline-flex items-center gap-2 mt-8 font-label-md text-label-md text-primary uppercase group" href="#">
+                            Voir le calendrier complet 
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="p-6 border border-surface-variant hover:border-primary transition-colors cursor-pointer flex justify-between items-center">
+<div>
+<p class="font-label-md text-label-md text-secondary uppercase">Mardi</p>
+<p class="font-headline-md text-headline-md">07:00 AM</p>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="add_circle">add_circle</span>
+</div>
+<div class="p-6 border border-surface-variant hover:border-primary transition-colors cursor-pointer flex justify-between items-center">
+<div>
+<p class="font-label-md text-label-md text-secondary uppercase">Mercredi</p>
+<p class="font-headline-md text-headline-md">19:00 PM</p>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="add_circle">add_circle</span>
+</div>
+<div class="p-6 border border-surface-variant hover:border-primary transition-colors cursor-pointer flex justify-between items-center">
+<div>
+<p class="font-label-md text-label-md text-secondary uppercase">Vendredi</p>
+<p class="font-headline-md text-headline-md">12:30 PM</p>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="add_circle">add_circle</span>
+</div>
+<div class="p-6 border border-surface-variant hover:border-primary transition-colors cursor-pointer flex justify-between items-center">
+<div>
+<p class="font-label-md text-label-md text-secondary uppercase">Samedi</p>
+<p class="font-headline-md text-headline-md">10:00 AM</p>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="add_circle">add_circle</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t-2 border-surface-variant">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center px-margin-mobile py-12 gap-gutter">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-primary uppercase font-black">FITSPACE</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 FITSPACE. AUCUNE EXCUSE.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Politique de confidentialité</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Conditions d'utilisation</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contacter le club</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Support</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors">brand_awareness</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors">group</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors">share</span>
+</div>
+</div>
+</footer>
+</body></html>
