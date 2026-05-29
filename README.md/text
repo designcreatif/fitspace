@@ -1,0 +1,53 @@
+# FitSpace
+
+Application web de gestion de salle de sport développée en PHP MVC et MySQL.
+
+## Fonctionnalités
+
+* Authentification et inscription
+* Réinitialisation du mot de passe
+* Gestion du profil utilisateur
+* Gestion des offres sportives
+* Réservation d'offres
+* Tableau de bord utilisateur
+* Tableau de bord administrateur
+* Gestion des utilisateurs
+* Gestion des réservations
+* Gestion des contenus
+
+## Technologies utilisées
+
+* PHP 8
+* MySQL
+* HTML5
+* CSS3
+* JavaScript
+* Tailwind CSS
+* Git & GitHub
+* Figma
+* Trello
+
+## Structure du projet
+
+* controllers/
+* models/
+* views/
+* database/
+* public/
+* core/
+* helpers/
+* middleware/
+
+## Installation
+
+1. Cloner le dépôt GitHub.
+2. Importer la base de données FitSpace dans phpMyAdmin.
+3. Configurer les paramètres de connexion dans le dossier config.
+4. Lancer le projet avec WampServer ou XAMPP.
+5. Accéder au projet via localhost.
+
+## Auteur
+
+Projet réalisé dans le cadre d'un projet de développement web.
+
+FitSpace © 2025
